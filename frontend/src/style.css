@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+@layer base {
+  body { @apply bg-slate-950 text-slate-100; font-family: system-ui, sans-serif; }
+  h1 { @apply text-2xl font-semibold; }
+  h2 { @apply text-xl font-semibold; }
+  button { @apply rounded-lg bg-emerald-400 px-4 py-2 font-semibold text-slate-950 cursor-pointer hover:bg-emerald-300 disabled:opacity-40 disabled:cursor-not-allowed; }
+  label { @apply block text-sm text-slate-300; }
+  input, select { @apply block w-full rounded-lg border border-slate-600 bg-slate-950 text-slate-100 p-2 mt-1 max-w-xl; }
+  table { @apply w-full text-left; }
+  th { @apply text-sm text-slate-400 py-3 pr-5; }
+  td { @apply py-4 pr-5 border-t border-slate-700 align-top; }
+  progress { accent-color: #6ee7b7; }
+}
+
+@layer components {
+  .panel { @apply rounded-xl border border-slate-700 bg-slate-900 p-5 md:p-7; }
+  .secondary { @apply bg-slate-800 text-slate-100 hover:bg-slate-700; }
+  .error { @apply rounded-lg border border-red-800 bg-red-950 p-3 text-red-200; }
+  .badge { @apply rounded-full px-2 py-1 text-xs font-medium; }
+  .high { @apply bg-red-950 text-red-200; }
+  .medium { @apply bg-amber-950 text-amber-200; }
+  .low { @apply bg-sky-950 text-sky-200; }
+}

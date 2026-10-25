@@ -1,0 +1,13 @@
+.env
+.dev-jwt
+
+__pycache__/
+*.pyc
+venv/
+.venv/
+.pytest_cache/
+.coverage
+htmlcov/
+
+node_modules/
+dist/

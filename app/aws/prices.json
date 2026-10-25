@@ -1,0 +1,15 @@
+{
+  "currency": "USD",
+  "monthly_hours": "730",
+  "note": "Illustrative monthly USD estimate; EC2 rates are Linux shared-tenancy on-demand. Verify current AWS regional pricing. Excludes discounts, taxes, provisioned IOPS/throughput and data processing.",
+  "regions": {
+    "us-east-1": {
+      "ebs": {"gp2": "0.10", "gp3": "0.08"},
+      "ec2": {"t3.micro": "0.0104", "t3.small": "0.0208", "t3.medium": "0.0416"},
+      "eip": "0.005",
+      "nat": "0.045",
+      "logs": "0.03",
+      "load_balancer": {"application": "0.0225", "network": "0.0225", "classic": "0.025"}
+    }
+  }
+}
