@@ -1,0 +1,50 @@
+export const metadata = {
+  title: "Ask a question",
+  description: "Ask about a cost in plain words and understand what the data can and cannot answer.",
+};
+
+# Ask a question
+
+<p className="lead">Ask about your bill in everyday words, and CloudLedger looks only at the accounts you can see, then answers with citations back to the underlying data.</p>
+
+## Asking
+
+Open the question box on the dashboard and type something like *“Why did EC2 cost more in
+March?”* or *“Which service grew the most this month?”* CloudLedger searches the cost and
+usage data it is allowed to read, then writes a short answer with numbered citations.
+
+Each citation points to a specific finding, resource, or time window, so you can check the
+source. An answer is built only from data that exists.
+
+## When the data cannot answer
+
+If the data does not cover the question, CloudLedger says so. It does not guess at a cause,
+invent a saving, or describe a resource it cannot see.
+
+> No data supports an answer to this question.
+
+That is a safeguard, not a failure. Narrow the question, or connect the account that holds
+the cost you are asking about.
+
+## Good questions to ask
+
+- “Which AWS service cost the most last month?”
+- “What changed after the deploy on Tuesday?”
+- “Where are we paying for idle resources?”
+- “Which resources have no owner tag?”
+- “How much did data transfer cost?”
+
+## Questions about other clouds
+
+Answers currently cover AWS only. Azure and Google Cloud answers are
+<span className="docs-badge">Coming soon</span>.
+
+## Availability
+
+Source-linked answers are <span className="docs-badge">Coming soon</span>. Until then, the
+dashboard and finding pages show the same evidence directly.
+
+## What the answer will not do
+
+The answer will not change a resource, approve a fix, or spend money. It explains what the
+data shows. Your team decides what happens next.

@@ -1,0 +1,60 @@
+export const metadata = {
+  title: "Privacy and sharing",
+  description: "Read-only access, account scope, team roles, and what CloudLedger never does.",
+};
+
+# Privacy and sharing
+
+<p className="lead">CloudLedger reads cost and usage data, and nothing else. Access is read-only, limited to the accounts you choose, and removable at any time.</p>
+
+## Read-only by default
+
+CloudLedger never asks for write access. It cannot create, change, or delete a resource, and
+it cannot move money. The connection is a role in your cloud account that you can audit and
+revoke.
+
+## What CloudLedger reads
+
+- Cost and usage records for the accounts and regions you select.
+- Resource metadata such as service name, region, tags, and identifiers.
+- Your account email and workspace settings.
+
+CloudLedger does not read application data, database contents, object contents, or customer
+records. [CONFIRM this list against the final integration before publishing.]
+
+## What it stores
+
+Cost and usage metadata, findings, and the email address on your account. Cloud credentials
+are not stored, because access is granted through a role rather than a key.
+
+## Who can see your data
+
+Today, access is limited to the people you invite to the workspace. Team roles and
+per-account permissions are <span className="docs-badge">Coming soon</span>.
+
+Sharing a finding with someone outside your workspace, or publishing a report link, is also
+<span className="docs-badge">Coming soon</span>.
+
+## Revoking access
+
+Delete the role in your cloud account. CloudLedger loses access immediately, and no further
+scans can run. Then remove the connection in settings.
+
+## What CloudLedger never does
+
+- It never changes or deletes a resource.
+- It never invents a number.
+- It never sells or shares your data.
+- It never trains a model on your account data.
+- It never uses ads or third-party trackers on this site.
+
+## Data residency
+
+[CONFIRM hosting provider and region before publishing.] The privacy policy on this site is
+being reviewed; it still contains clauses written for a different product.
+
+## Related
+
+- [Your data](/docs/your-data)
+- [Trust and privacy](/trust)
+- [Privacy policy](/legal/privacy)

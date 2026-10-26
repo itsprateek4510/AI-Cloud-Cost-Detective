@@ -1,0 +1,56 @@
+export const metadata = {
+  title: "Getting started",
+  description: "Create an account, connect an AWS account, and run your first scan.",
+};
+
+# Getting started
+
+<p className="lead">A few minutes to set up, then CloudLedger can start reading your AWS bill.</p>
+
+## 1. Create your account
+
+Open **Sign up** and use an email address and password, or choose **Continue with Google**.
+If Google sign-in is not switched on for this copy of CloudLedger, sign in with email
+instead.
+
+## 2. Connect an AWS account
+
+CloudLedger reads your cost and usage data through a read-only role. You do not paste access
+keys, and there is no agent to install.
+
+You will need permission in AWS to create a role. The setup screen explains which read-only
+permissions to grant. [CONFIRM the exact permissions before publishing.]
+
+## 3. Choose what is scanned
+
+Pick the account and regions you want CloudLedger to read. You can change this later. Some
+accounts can stay off-limits, and the rest of the workspace keeps working.
+
+## 4. Read your first scan
+
+When the first scan finishes, the dashboard shows:
+
+- total spend for the selected period,
+- the services that changed the most,
+- and a list of findings, each with an estimated monthly saving.
+
+Open any finding to see the resource, the time window, and the evidence behind the number.
+
+## What is live today
+
+- AWS read-only connection
+- AWS cost dashboard
+- AWS waste findings
+- Weekly email and Slack summary
+
+## Coming soon
+
+Azure and Google Cloud connections, rightsizing recommendations, and anomaly alerts are not
+available yet. They are marked <span className="docs-badge">Coming soon</span> in the app and
+in this guide.
+
+## Where to next
+
+- **Connect a cloud account** — adjust accounts and regions.
+- **Review findings** — check the evidence and decide what to fix.
+- **Weekly summary** — see what arrives in your inbox each week.

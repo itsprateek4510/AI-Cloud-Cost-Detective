@@ -1,0 +1,68 @@
+export const metadata = {
+  title: "Developers",
+  description: "Run this site locally and understand the read-only cloud connection model.",
+};
+
+# Developers
+
+<p className="lead">How this marketing site is built, how to run it locally, and the access model behind the product.</p>
+
+## This site
+
+- **Framework:** Next.js App Router with TypeScript.
+- **Styling:** plain CSS modules and global CSS. No component library.
+- **Docs:** MDX pages under `src/app/(docs)/docs`, indexed in `src/lib/docs-nav.ts`.
+- **Forms:** the booking flow stores a draft in `sessionStorage`; no booking is confirmed.
+
+## Product stack
+
+[CONFIRM the backend stack, repository layout, and deployment target before publishing.
+Do not copy the setup commands from the previous product.]
+
+## Run the site locally
+
+```sh
+npm install
+npm run dev
+```
+
+Then open `http://localhost:3000`. To check a production build:
+
+```sh
+npm run lint
+npm run build
+```
+
+## Environment variables
+
+| Variable | Purpose |
+| --- | --- |
+| `NEXT_PUBLIC_CONTACT_EMAIL` | Address used by the contact page and footer. |
+| `NEXT_PUBLIC_CAL_URL` | Optional live scheduling link for the booking flow. |
+
+[CONFIRM any API base URL, auth variables, and analytics settings.]
+
+## The access model
+
+CloudLedger reads cost and usage data through a read-only role in the customer's cloud
+account. The guiding rules:
+
+- Access is read-only. No write permission is requested.
+- The customer can revoke access by deleting the role.
+- Findings are computed from cost and usage data, not from application data.
+- AI explains and prioritises. It does not produce the savings numbers.
+- Nothing is changed automatically. Fixes are suggestions.
+
+## Adding a docs page
+
+1. Create `docs/<slug>/page.mdx` under `src/app/(docs)`.
+2. Add the page to `src/lib/docs-nav.ts` with a title, description, and group.
+3. Use `<span className="docs-badge">Coming soon</span>` for anything that is not live.
+
+The sidebar, search index, and overview cards read from `docs-nav.ts`, so no other file needs
+to change.
+
+## Coming soon
+
+A public API, webhooks, and a Terraform provider are
+<span className="docs-badge">Coming soon</span>. [CONFIRM which of these are planned.]

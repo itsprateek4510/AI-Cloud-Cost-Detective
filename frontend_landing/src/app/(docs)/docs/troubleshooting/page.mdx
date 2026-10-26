@@ -1,0 +1,55 @@
+export const metadata = {
+  title: "Troubleshooting",
+  description: "Common questions about connections, findings, sign-in, and summaries.",
+};
+
+# Troubleshooting
+
+<p className="lead">Quick answers to the things people ask most. Every page has a link back to this guide.</p>
+
+## The AWS connection will not complete
+
+Check three things:
+
+1. The role ARN matches the account you meant to connect.
+2. The role trusts CloudLedger, including the external ID if one is shown.
+3. The role has the read-only permissions listed on the setup screen.
+
+Then retry. If it still fails, remove the connection and start again. [CONFIRM the exact
+error messages before publishing.]
+
+## The dashboard is empty
+
+A new connection needs a first scan before there is anything to show. [CONFIRM how long the
+first scan takes.] Check that the account has cost data for the selected period, and that you
+selected at least one region.
+
+## The total does not match the AWS bill
+
+CloudLedger uses cost and usage data, not your invoice. Discounts, credits, taxes, support
+charges, and time-zone boundaries can make the two differ. [CONFIRM how credits and discounts
+are handled.] The finding estimates are directionally useful, not invoice-exact.
+
+## A finding looks wrong
+
+Mark it as expected and write a short reason, so it stops appearing in the main list. If the
+number itself looks wrong, send us the finding link from the [contact page](/contact).
+
+## The weekly summary did not arrive
+
+Check the email address or Slack connection in **Settings → Notifications**, then look in
+spam. The summary is sent once a week. [CONFIRM send day and time.]
+
+## I cannot sign in
+
+If Google sign-in is not configured for this copy of CloudLedger, use your email and password.
+If you have forgotten the password, [CONFIRM the reset flow before publishing].
+
+## An export is missing
+
+Export is <span className="docs-badge">Coming soon</span>. Contact us and we will arrange a
+copy of your data in the meantime.
+
+## Something else
+
+Use the feedback link on any guide page, or reach the team from [Contact](/contact).

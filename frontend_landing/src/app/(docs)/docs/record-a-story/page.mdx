@@ -1,0 +1,48 @@
+export const metadata = {
+  title: "Review findings",
+  description: "Open a cost finding, check the evidence, and decide what to fix first.",
+};
+
+# Review findings
+
+<p className="lead">A finding is a specific cost problem with an estimated saving. The number is only useful if you can check it, so every finding shows its working.</p>
+
+## Open a finding
+
+From the dashboard, choose a finding to see:
+
+- the resource and account it belongs to,
+- the time window that was measured,
+- the estimated monthly saving,
+- and the cost and usage data behind the estimate.
+
+If a number cannot be traced to that evidence, treat it as a bug and tell us.
+
+## What the status means
+
+- **Open** — nobody has reviewed it yet.
+- **Expected** — someone marked it as intentional, with a reason. It stops appearing in the
+  main list, and the reason stays on record.
+- **Resolved** — the resource was fixed or removed. [CONFIRM how resolution is detected.]
+
+## Fixing a finding
+
+CloudLedger suggests a fix. It never applies one. For most AWS waste findings, the fix is a
+change your team makes in the console, Terraform, or a ticket.
+
+Fix pull requests and approvals are <span className="docs-badge">Coming soon</span>.
+
+## Marking a finding as expected
+
+If a resource is meant to be there, mark it as expected and write a short reason. This keeps
+the list honest without deleting the history. You can undo it later.
+
+## Savings are estimates
+
+Savings are calculated from your usage and published pricing. Your discounts, credits, taxes,
+and contract terms can change the real number. The estimate is a direction, not an invoice.
+
+## Where to next
+
+- **Weekly summary** — see the findings that matter, once a week.
+- **Privacy and sharing** — understand what CloudLedger can and cannot read.

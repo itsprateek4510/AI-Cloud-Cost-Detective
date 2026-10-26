@@ -3,6 +3,7 @@ import { api, ApiError, money, type AIReportResponse, type Scan } from '../api';
 import { ScanResults } from '../components/ScanResults';
 import { useScan } from '../hooks/useScan';
 import { SpendHistory } from '../components/SpendHistory';
+import { Icon } from '../components/Brand';
 
 function ExecutiveReport({ token, scan, onFinding }: { token: string; scan: Scan; onFinding: () => void }) {
   const [response, setResponse] = useState<AIReportResponse | null>(null);
@@ -63,13 +64,12 @@ function ExecutiveReport({ token, scan, onFinding }: { token: string; scan: Scan
   </section>;
 }
 
-export function Report({ token, scanId }: { token: string; scanId: number | null }) {
+export function Report({ token, scanId, onScan }: { token: string; scanId: number | null; onScan?: () => void }) {
   const { scan, error } = useScan(token, scanId);
   const [focusVersion, setFocusVersion] = useState(0);
   return <div className="space-y-6">
-    <h1>Scan report</h1>
-    <p className="text-slate-400">Deterministic findings and savings, with an optional cached Gemini explanation.</p>
-    {scanId === null && <p>Start a scan on the Scans page to view its report.</p>}
+    <div className="page-heading"><div><p className="eyebrow">THE STORY BEHIND YOUR SPEND</p><h1>Scan report</h1><p>Deterministic findings and savings, with an optional cached Gemini explanation.</p></div></div>
+    {scanId === null && <section className="panel empty-state"><span className="empty-symbol"><Icon name="report" size={30} /></span><h2>Your next clear decision starts here.</h2><p>Start a scan on the Scans page to view its report.</p>{onScan && <button onClick={onScan}>Go to scans <Icon name="arrow" /></button>}</section>}
     {error && <p role="alert" className="error">{error}</p>}
     {scanId !== null && !scan && !error && <p role="status">Loading scan…</p>}
     {scan?.status === 'completed' && <ExecutiveReport key={scan.scan_id} token={token} scan={scan} onFinding={() => setFocusVersion(version => version + 1)} />}

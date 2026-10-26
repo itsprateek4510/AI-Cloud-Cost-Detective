@@ -1,0 +1,1 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="500"><filter id="paper"><feTurbulence type="fractalNoise" baseFrequency=".035" numOctaves="5" seed="8"/><feDiffuseLighting lighting-color="#f5f3ef" surfaceScale="1.5"><feDistantLight azimuth="45" elevation="60"/></feDiffuseLighting></filter><rect width="100%" height="100%" filter="url(#paper)" opacity=".45"/></svg>

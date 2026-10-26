@@ -1,0 +1,47 @@
+export const metadata = {
+  title: "Connect a cloud account",
+  description: "Add an AWS account with a read-only role and choose what CloudLedger can read.",
+};
+
+# Connect a cloud account
+
+A **connection** is one cloud account that CloudLedger is allowed to read. Access is
+read-only, and you can remove it at any time.
+
+## Connect AWS
+
+1. Open **Settings → Connections** and choose **Add account**.
+2. Choose **AWS**.
+3. Create a read-only role in your AWS account using the details on screen.
+4. Paste the role ARN back into CloudLedger and confirm.
+5. Pick the regions you want to scan.
+
+CloudLedger does not ask for an access key or a secret. The role is the only thing it needs,
+and deleting the role ends access immediately.
+
+## Choosing accounts and regions
+
+You can connect more than one AWS account. Each account is scanned separately, and findings
+always name the account and region they came from. Regions you leave out are not read.
+
+## Re-scanning
+
+Cost and usage data is refreshed on a schedule. [CONFIRM refresh interval.] You can also run
+a scan manually from the dashboard.
+
+## Removing a connection
+
+Delete the role in AWS, then remove the connection in CloudLedger. Existing findings remain
+until you delete them. [CONFIRM what happens to historical findings after a connection is
+removed.]
+
+## Coming soon
+
+Azure and Google Cloud connections are not available yet, and are marked
+<span className="docs-badge">Coming soon</span>. Team roles, shared workspaces, and
+per-account access rules are also coming soon.
+
+## If the connection fails
+
+Check the role ARN, the external ID if one is shown, and the read-only permissions. Then try
+again. See [Troubleshooting](/docs/troubleshooting) for the common causes.

@@ -1,0 +1,57 @@
+import { docGroups, docsNav } from "@/lib/docs-nav";
+
+export const metadata = {
+  title: "Overview",
+  description: "What CloudLedger is, what it is not, and how to use this guide.",
+};
+
+# CloudLedger guide
+
+<p className="lead">CloudLedger connects to your cloud accounts, finds wasted spend, and explains every number with the data behind it. This guide explains how each part works, in plain language.</p>
+
+CloudLedger is a read-only cloud cost platform for AWS, Azure and Google Cloud. You connect
+an account, and CloudLedger reads cost and usage data, groups it, and lists what looks wrong.
+Fixes are suggestions. Nothing changes on its own.
+
+## Two things to know before anything else
+
+1. **Read-only by default.** CloudLedger never needs permission to change, delete, or create
+   resources. You grant access through a role you can revoke at any time.
+2. **Every number has a source.** Each finding links to the resource, metric, and time window
+   that produced it. When the data does not support a claim, CloudLedger says so.
+
+## What you can do
+
+<ul className="docs-card-grid">
+  {docsNav.filter((doc) => doc.slug !== "overview").map((doc) => (
+    <li className="docs-card" key={doc.href}>
+      <a href={doc.href}>
+        <span className="docs-card-title">{doc.title}</span>
+        <p>{doc.description}</p>
+      </a>
+    </li>
+  ))}
+</ul>
+
+## How the guide is organised
+
+{docGroups.map((group) => (
+  <span key={group}>{group} · </span>
+))}
+
+Start with **Getting started** if this is your first time. If you are building an
+integration, jump to **Developers**.
+
+## Live today
+
+- AWS read-only connection
+- AWS cost dashboard
+- AWS waste findings
+- Weekly email and Slack summary
+
+## Coming soon
+
+Azure and Google Cloud connections, rightsizing recommendations, anomaly alerts, budgets
+and forecasting, allocation and showback, Kubernetes and AI-spend costs, fix pull requests,
+SSO and audit logs, and multi-client dashboards. These are marked
+<span className="docs-badge">Coming soon</span> wherever they appear in this guide.

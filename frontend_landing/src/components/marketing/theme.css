@@ -1,0 +1,125 @@
+/* Match the existing hero without changing it or the signed-in product UI. */
+.marketing-main {
+  --marketing-ink: #172b3c;
+  --marketing-muted: #5c6974;
+  --marketing-accent: #3069a7;
+  --marketing-primary: linear-gradient(120deg, #244f70, #326b95);
+  --marketing-line: #dce1e7;
+  --marketing-surface: #f8fafc;
+  --marketing-tint: #eff5ff;
+  --marketing-shadow: 0 8px 24px #243c6008;
+}
+
+.marketing-main > :not(.hero) {
+  --ink: var(--marketing-ink);
+  --muted: var(--marketing-muted);
+  --blue: var(--marketing-accent);
+  --line: var(--marketing-line);
+  color: var(--ink);
+}
+
+.marketing-main > :not(.hero) .button-primary,
+.marketing-main > :not(.hero) .price-card.featured .button {
+  background: var(--marketing-primary);
+  box-shadow: 0 8px 22px #244f7025;
+}
+
+.marketing-main .paper-section {
+  background: var(--marketing-surface);
+}
+
+.marketing-main .story-photo {
+  transform: none;
+  padding: 8px;
+  border-color: var(--marketing-line);
+  box-shadow: 0 24px 56px -20px #243c6030;
+}
+
+.marketing-main .story-photo-img {
+  height: auto;
+  aspect-ratio: 1600 / 1334;
+  background: #f6f8fb;
+}
+
+.marketing-main .story-photo-img > img {
+  object-fit: contain;
+  object-position: center;
+}
+
+.marketing-main :is(.sample-card, .use-case, .price-card, .principle-card, .faq-list details) {
+  border-color: var(--marketing-line);
+  border-radius: 14px;
+  box-shadow: var(--marketing-shadow);
+}
+
+.marketing-main :is(.sample-card, .price-card) {
+  background: #fff;
+}
+
+.marketing-main :is(.sample-card, .price-card):hover {
+  border-color: var(--marketing-accent);
+  box-shadow: 0 16px 36px #243c6014;
+}
+
+.marketing-main :is(.sample-card h3, .price-card h3, .plan-price, .yearly-plan h3) {
+  color: var(--marketing-ink);
+  background: none;
+  -webkit-text-fill-color: currentColor;
+}
+
+.marketing-main .faq-list summary {
+  color: var(--marketing-ink);
+}
+
+.marketing-main :is(.case-visual, .chat-preview, .yearly-plan) {
+  background: var(--marketing-tint);
+  border-radius: 14px;
+}
+
+.marketing-main .chat-bubble {
+  color: var(--marketing-ink);
+  background: #fff;
+}
+
+.marketing-main .price-card.featured {
+  border-color: var(--marketing-accent);
+  background: var(--marketing-surface);
+  box-shadow:
+    0 0 0 1px var(--marketing-accent),
+    0 12px 32px #243c6014;
+}
+
+.marketing-main :is(.price-badge, .yearly-plan .tag) {
+  background: var(--marketing-primary);
+  box-shadow: none;
+  animation: none;
+}
+
+.marketing-main .yearly-plan::before {
+  background: none;
+}
+
+.marketing-main :is(.tag, .price-card li svg) {
+  color: var(--marketing-accent);
+  background: var(--marketing-tint);
+  box-shadow: none;
+}
+
+.marketing-main :is(.trust-items svg, .faq-list summary svg, .record-indicator) {
+  color: var(--marketing-accent);
+}
+
+.marketing-main .trust-items svg {
+  stroke: currentColor;
+}
+
+.marketing-main .promise-section {
+  color: #fff;
+  background: #101319;
+}
+
+.marketing-main .promise-tags span {
+  border-color: #ffffff24;
+  background: #191e27;
+  color: #b8c4d6;
+}

@@ -1,0 +1,16 @@
+.progress {
+  position: fixed;
+  inset: 0 0 auto;
+  height: 2px;
+  background: linear-gradient(90deg, #2676ff, #8baeff);
+  transform: scaleX(0);
+  transform-origin: left;
+  pointer-events: none;
+  z-index: 60;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .progress {
+    display: none;
+  }
+}
